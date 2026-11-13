@@ -100,6 +100,11 @@ a{color:inherit;text-decoration:underline;text-decoration-color:var(--gva-accent
 .cut{background:var(--phoebe-pink);border-radius:var(--gva-radius-panel-sp);padding:24px;min-width:0}
 .cut-time{font-size:13px;font-weight:700;color:var(--phoebe-sub);margin-bottom:14px;line-height:1.7}
 .cut-time .num{font-size:18px;color:var(--phoebe-ink)}
+.shoot-note{margin:12px auto 28px;max-width:36em;text-align:center;font-size:13px;line-height:1.9;color:var(--phoebe-sub)}
+.cut-layout{display:grid;gap:16px;min-width:0;align-items:start}
+.cut-shot{margin:0;min-width:0;max-width:168px}
+.cut-shot img{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:16px;background:var(--phoebe-white);box-shadow:0 0 0 1px var(--gva-rule)}
+.cut-shot figcaption{margin-top:8px;font-size:12px;line-height:1.6;color:var(--phoebe-sub);letter-spacing:.04em;text-align:center}
 .cut-body{display:grid;gap:18px;min-width:0}
 .cut-body h3{font-size:var(--gva-fs-min);font-weight:700;letter-spacing:.12em;color:var(--phoebe-sub);margin-bottom:8px}
 .cut-body p{font-size:15px;line-height:1.9;font-weight:500;overflow-wrap:anywhere;min-width:0}
@@ -174,6 +179,8 @@ a{color:inherit;text-decoration:underline;text-decoration-color:var(--gva-accent
   .timeline::before{left:19px}
   .cut-no{left:-56px;width:36px;height:36px;top:26px;font-size:14px}
   .cut{border-radius:var(--gva-radius-panel-pc);padding:28px 32px}
+  .cut-layout{grid-template-columns:180px minmax(0,1fr);gap:28px}
+  .cut-shot{max-width:180px}
   .cut-body{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px}
   .phone{border-radius:40px;padding:14px 24px 28px}
   .price-card{border-radius:var(--gva-radius-panel-pc);padding:48px 56px}
@@ -270,12 +277,18 @@ a{color:inherit;text-decoration:underline;text-decoration-color:var(--gva-accent
   </div>
 </header>
 <section class="wrap chap" aria-labelledby="reel">
+  <p class="shoot-note">※撮影イメージはAI生成です。商品パッケージは仮のもので実物とは異なります。</p>
   <ol class="timeline">
     <li>
       <div class="cut-no" aria-hidden="true"><span class="num">0</span></div>
       <article class="cut">
         <p class="cut-time"><span class="k">カット 0　</span><span class="num">0〜2</span><span class="u">秒</span></p>
-        <div class="cut-body">
+        <div class="cut-layout">
+          <figure class="cut-shot">
+            <img src="assets/shoot/cut0.webp" width="540" height="960" alt="カット0の撮影イメージ（AI生成）" loading="eager" decoding="async">
+            <figcaption>撮影イメージ（AI生成）</figcaption>
+          </figure>
+          <div class="cut-body">
           <div>
             <h3>映像</h3>
             <p>朝の光の中で、ななが振り返ってカメラに目線を送る</p>
@@ -285,13 +298,19 @@ a{color:inherit;text-decoration:underline;text-decoration-color:var(--gva-accent
             <p class="telop">素敵な女性になるためにやっていること5選🎀</p>
           </div>
         </div>
+        </div>
       </article>
     </li>
     <li>
       <div class="cut-no" aria-hidden="true"><span class="num">1</span></div>
       <article class="cut">
         <p class="cut-time"><span class="k">カット 1　</span><span class="num">2〜5</span><span class="u">秒</span></p>
-        <div class="cut-body">
+        <div class="cut-layout">
+          <figure class="cut-shot">
+            <img src="assets/shoot/cut1.webp" width="540" height="960" alt="カット1の撮影イメージ（AI生成）" loading="lazy" decoding="async">
+            <figcaption>撮影イメージ（AI生成）</figcaption>
+          </figure>
+          <div class="cut-body">
           <div>
             <h3>映像</h3>
             <p>朝の窓際で、お気に入りのボトルから水を飲む</p>
@@ -301,13 +320,19 @@ a{color:inherit;text-decoration:underline;text-decoration-color:var(--gva-accent
             <p class="telop">① 1日お水を2L飲む</p>
           </div>
         </div>
+        </div>
       </article>
     </li>
     <li>
       <div class="cut-no" aria-hidden="true"><span class="num">2</span></div>
       <article class="cut">
         <p class="cut-time"><span class="k">カット 2　</span><span class="num">5〜8</span><span class="u">秒</span></p>
-        <div class="cut-body">
+        <div class="cut-layout">
+          <figure class="cut-shot">
+            <img src="assets/shoot/cut2.webp" width="540" height="960" alt="カット2の撮影イメージ（AI生成）" loading="lazy" decoding="async">
+            <figcaption>撮影イメージ（AI生成）</figcaption>
+          </figure>
+          <div class="cut-body">
           <div>
             <h3>映像</h3>
             <p>朝の街や川沿いを走る後ろ姿 → 少し息を切らして笑う</p>
@@ -317,13 +342,19 @@ a{color:inherit;text-decoration:underline;text-decoration-color:var(--gva-accent
             <p class="telop">② 朝のランニング</p>
           </div>
         </div>
+        </div>
       </article>
     </li>
     <li>
       <div class="cut-no" aria-hidden="true"><span class="num">3</span></div>
       <article class="cut">
         <p class="cut-time"><span class="k">カット 3　</span><span class="num">8〜11</span><span class="u">秒</span></p>
-        <div class="cut-body">
+        <div class="cut-layout">
+          <figure class="cut-shot">
+            <img src="assets/shoot/cut3.webp" width="540" height="960" alt="カット3の撮影イメージ（AI生成）" loading="lazy" decoding="async">
+            <figcaption>撮影イメージ（AI生成）</figcaption>
+          </figure>
+          <div class="cut-body">
           <div>
             <h3>映像</h3>
             <p>夜のお風呂。湯気の中で、フェムケアソープのもこもこ泡を手にのせる（手元と泡だけ）</p>
@@ -333,13 +364,19 @@ a{color:inherit;text-decoration:underline;text-decoration-color:var(--gva-accent
             <p class="telop">③ フェムケアはやさしい泡で🫧</p>
           </div>
         </div>
+        </div>
       </article>
     </li>
     <li>
       <div class="cut-no" aria-hidden="true"><span class="num">4</span></div>
       <article class="cut">
         <p class="cut-time"><span class="k">カット 4　</span><span class="num">11〜14</span><span class="u">秒</span></p>
-        <div class="cut-body">
+        <div class="cut-layout">
+          <figure class="cut-shot">
+            <img src="assets/shoot/cut4.webp" width="540" height="960" alt="カット4の撮影イメージ（AI生成）" loading="lazy" decoding="async">
+            <figcaption>撮影イメージ（AI生成）</figcaption>
+          </figure>
+          <div class="cut-body">
           <div>
             <h3>映像</h3>
             <p>お風呂上がり。ベッドに座って、アイクリームを薬指で目元に（寄り）</p>
@@ -349,13 +386,19 @@ a{color:inherit;text-decoration:underline;text-decoration-color:var(--gva-accent
             <p class="telop">④ 目元の保湿はさぼらない</p>
           </div>
         </div>
+        </div>
       </article>
     </li>
     <li>
       <div class="cut-no" aria-hidden="true"><span class="num">5</span></div>
       <article class="cut">
         <p class="cut-time"><span class="k">カット 5　</span><span class="num">14〜17</span><span class="u">秒</span></p>
-        <div class="cut-body">
+        <div class="cut-layout">
+          <figure class="cut-shot">
+            <img src="assets/shoot/cut5.webp" width="540" height="960" alt="カット5の撮影イメージ（AI生成）" loading="lazy" decoding="async">
+            <figcaption>撮影イメージ（AI生成）</figcaption>
+          </figure>
+          <div class="cut-body">
           <div>
             <h3>映像</h3>
             <p>バービーデザインのまつ毛美容液を塗る → カメラに目線を送って少し笑う</p>
@@ -365,13 +408,19 @@ a{color:inherit;text-decoration:underline;text-decoration-color:var(--gva-accent
             <p class="telop">⑤ 夜のまつ毛ケア、これがいちばんかわいい</p>
           </div>
         </div>
+        </div>
       </article>
     </li>
     <li>
       <div class="cut-no" aria-hidden="true"><span class="num">6</span></div>
       <article class="cut">
         <p class="cut-time"><span class="k">カット 6　</span><span class="num">17〜21</span><span class="u">秒</span></p>
-        <div class="cut-body">
+        <div class="cut-layout">
+          <figure class="cut-shot">
+            <img src="assets/shoot/cut6.webp" width="540" height="960" alt="カット6の撮影イメージ（AI生成）" loading="lazy" decoding="async">
+            <figcaption>撮影イメージ（AI生成）</figcaption>
+          </figure>
+          <div class="cut-body">
           <div>
             <h3>映像</h3>
             <p>ベッドの上にポーチと3商品を並べた置き画 → ななの手がポーチを持ち上げる</p>
@@ -380,6 +429,7 @@ a{color:inherit;text-decoration:underline;text-decoration-color:var(--gva-accent
             <h3>テロップ</h3>
             <p class="telop"><span>Qoo10メガ割限定 コラボセットA</span><span>クーポン併用で9,614円（税込）最大43%OFF</span><span>バービーコラボポーチ付き</span><span>11/20 10:00〜12/2</span></p>
           </div>
+        </div>
         </div>
       </article>
     </li>
@@ -423,7 +473,7 @@ Qoo10メガ割限定のコラボセットAは
 
 ちいさな積み重ねで、すきな自分に近づけますように。
 
-<span class="hash">#PR</span> <span class="hash">#PHOEBE</span> <span class="hash">#フィービー</span> <span class="hash">#バービー</span> <span class="hash">#Barbie</span> <span class="hash">#Qoo10メガ割</span> <span class="hash">#メガ割</span> <span class="hash">#まつ毛美容液</span> <span class="hash">#アイクリーム</span> <span class="hash">#フェムケア</span> <span class="hash">#夜のルーティン</span> <span class="hash">#素敵な女性</span>
+<span class="hash">#PR</span> <span class="hash">#PHOEBE</span> <span class="hash">#Qoo10メガ割</span>
 © 2026 Mattel.</pre>
       <button type="button" class="copy-btn" id="copy-caption" data-idle="コピー" data-done="コピーしました" aria-label="コピー">
         <span class="copy-label">コピー</span>
@@ -452,7 +502,7 @@ Qoo10メガ割限定のコラボセットAは
 
 ちいさな積み重ねで、すきな自分に近づけますように。
 
-#PR #PHOEBE #フィービー #バービー #Barbie #Qoo10メガ割 #メガ割 #まつ毛美容液 #アイクリーム #フェムケア #夜のルーティン #素敵な女性
+#PR #PHOEBE #Qoo10メガ割
 © 2026 Mattel.</textarea>
 
 <header class="sec-head" id="product">
@@ -504,7 +554,7 @@ Qoo10メガ割限定のコラボセットAは
     </li>
     <li>
       <span class="mk" aria-hidden="true"><i></i></span>
-      <p>AI画像は使わない</p>
+      <p>投稿本番ではAI画像は使わない</p>
     </li>
     <li>
       <span class="mk" aria-hidden="true"><i></i></span>
