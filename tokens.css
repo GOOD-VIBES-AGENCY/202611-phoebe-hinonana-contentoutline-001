@@ -1,60 +1,37 @@
 /* =====================================================================
-   GVA 成果レポートの型 v5（黒地＋青・全章。書体は自前配信）— tokens.css
-   第1部：案件ごとに差し替えるもの（ロゴだけ）
-   第2部：型の固定値（GVA ブランドガイドライン v3.2 の3色＋濃い灰色1段）
+   PHOEBE 構成案ページ専用（今回のみの例外）。
+   参考：薄ピンク帯 + 白地 + チャコールの斜体英字見出し。
    ===================================================================== */
 
-/* ---------- 第1部　案件変数（ロゴだけ） ---------- */
 :root{
   --client-name: "PHOEBE";
-}
 
-/* ---------- 第2部　型の固定値 ---------- */
-:root{
-  /* ブランドの3色（ガイドライン p.03） */
-  --gva-blue:  #246BFF;   /* Electric Blue：アクセント専用 */
-  --gva-black: #101010;   /* Graphite Black：背景 */
-  --gva-white: #FFFFFF;   /* Pure White：文字 */
+  --phoebe-pink:    #F8EEEF;  /* 帯・面の薄ピンク */
+  --phoebe-pink-ui: #E8C9CE;  /* ボタン・カット番号などの柔らかいアクセント */
+  --phoebe-ink:     #3E3A39;  /* チャコール本文・英字見出し */
+  --phoebe-sub:     #777777;  /* 和文サブタイトル */
+  --phoebe-white:   #FFFFFF;
+  --phoebe-rule:    #E8E0E1;
 
-  /* 役割（黒地） */
-  --gva-bg:       var(--gva-black);
-  --gva-surface:  #1C1C1E;  /* 追加の濃い灰色は1段だけ。比較パネル・章立ての帯・表の計画値の行 */
-  --gva-fg:       var(--gva-white);  /* 対#101010 19.03:1 / 対#1C1C1E 17.01:1 */
-  --gva-fg-sub:   #A3A3A3;  /* 補助の文字 対#101010 7.54:1 / 対#1C1C1E 6.75:1 */
-  --gva-rule:        #3A3A3C;  /* 罫線（文字には使わない） */
-  --gva-rule-strong: #6E6E73;  /* 強めの区切り線（文字には使わない） */
-  --gva-track:       #2C2C2E;  /* 棒グラフの下地 */
+  --gva-bg:       var(--phoebe-white);
+  --gva-surface:  var(--phoebe-pink);
+  --gva-fg:       var(--phoebe-ink);
+  --gva-fg-sub:   var(--phoebe-sub);
+  --gva-rule:     var(--phoebe-rule);
+  --gva-rule-strong: #C9BFC0;
+  --gva-accent:   var(--phoebe-pink-ui);
+  --gva-white:    var(--phoebe-white);
 
-  /* 青の使い方：青文字は 対#101010 4.19:1 / 対#1C1C1E 3.74:1 で AA(4.5) に届かない
-     → 青は「大きな数字（24px以上、または太字18.66px以上＝AA Large 3:1）」と「図形（印・棒・線）」だけ。
-       小さい文字・本文・リンク文字には使わない（リンクは白文字＋青の下線） */
-  --gva-accent: var(--gva-blue);
-
-  /* v4：青の面（白い太字だけを置く。白/青 4.54:1）
-     使う場所＝最上部の細い帯、ヒーローの根拠パネル、章の扉（02〜06）、表の「計画より良い」のセル */
-  --gva-blue-face:   var(--gva-blue);
-  --gva-on-blue:     var(--gva-white);
-  --gva-on-blue-rule: rgba(255,255,255,.6);
-  --gva-topbar-h:    6px;
-  --gva-blue-tint:   rgba(36,107,255,.16);  /* 図の「計画より良い側」の淡い面（文字は白、対比は measure.txt） */
-
-  /* 計画との比較の印（色＋形＋文字） */
-  --gva-good-bg:    var(--gva-blue);   /* 計画より良い：青の塗り＋白のチェック＋白文字（白/青 4.54:1） */
-  --gva-good-fg:    var(--gva-white);
-  --gva-short-line: var(--gva-white);  /* 計画に届かず：白い線の枠＋横線＋白文字（塗りなし） */
-
-  /* 書体：英字と数字 Inter、和文 源ノ角ゴシック JP（Noto Sans JP で代用）。太さ 700/500/400 */
   --gva-f-en: "Inter", "Helvetica Neue", Arial, sans-serif;
   --gva-f-ja: "Noto Sans JP Subset", "Noto Sans JP", "Source Han Sans JP", "Hiragino Sans", sans-serif;
+  --gva-f-display: "Montserrat", "Inter", "Helvetica Neue", Arial, sans-serif;
   --gva-num-feature: "tnum" 1, "lnum" 1;
   --gva-w-bold: 700; --gva-w-medium: 500; --gva-w-regular: 400;
 
-  /* 文字の大きさ（SP390 で最小 12px） */
-  --gva-fs-num-hero: clamp(72px, 19vw, 160px);
-  --gva-fs-num-l:    clamp(44px, 9vw, 88px);
+  --gva-fs-num-l:    clamp(40px, 8vw, 72px);
   --gva-fs-num-m:    clamp(24px, 5.6vw, 32px);
-  --gva-fs-h1:       clamp(34px, 5.4vw, 72px);
-  --gva-fs-h2:       clamp(26px, 3.4vw, 44px);
+  --gva-fs-h1:       clamp(32px, 5vw, 60px);
+  --gva-fs-h2:       clamp(26px, 5.5vw, 52px);
   --gva-fs-lead:     clamp(16px, 1.5vw, 19px);
   --gva-fs-body:     16px;
   --gva-fs-caption:  14px;
@@ -62,41 +39,24 @@
   --gva-unit-ratio:  .3;
   --gva-ls-num:      -0.025em;
 
-  /* 余白 */
-  --gva-gutter-sp: 20px;  --gva-gutter-pc: 64px;
-  --gva-section-sp: 96px; --gva-section-pc: 160px;
+  /* SPは左右 28px（390でも端に文字がつかない） */
+  --gva-gutter-sp: 28px;  --gva-gutter-pc: 64px;
+  --gva-section-sp: 72px; --gva-section-pc: 120px;
   --gva-max-w: 1200px;
 
-  /* 形 */
   --gva-radius-panel-sp: 24px;
   --gva-radius-panel-pc: 32px;
   --gva-radius-badge: 999px;
-  --gva-bar-h: 8px;
 
-  /* クライアントロゴ枠（位置と寸法は固定） */
-  --gva-masthead-h-sp: 72px;  --gva-masthead-h-pc: 96px;
-  --gva-logo-max-w-sp: 128px; --gva-logo-max-h-sp: 40px;
-  --gva-logo-max-w-pc: 176px; --gva-logo-max-h-pc: 48px;
+  --gva-masthead-h-sp: 72px;  --gva-masthead-h-pc: 88px;
   --gva-logo-clear-sp: 16px;  --gva-logo-clear-pc: 24px;
 
-  /* GVA ロゴ（署名・横型・白版）。原画像 857×52px → 2倍表示で高さ 26px が上限 */
-  --gva-sign-logo-h-sp: 18px;  --gva-sign-logo-h-pc: 26px;
+  --gva-sign-logo-h-sp: 16px;  --gva-sign-logo-h-pc: 22px;
   --gva-sign-logo-ratio: 857 / 52;
 
-  /* 動き */
   --gva-ease: cubic-bezier(.25,.1,.25,1);
-  --gva-dur-count: 1000ms;
-  --gva-dur-bar: 700ms;
-  --gva-dur-fade: 400ms;
 }
-/* 印刷（白地）：黒地の配色を白地に置き換える */
-@media print{
-  :root{
-    --gva-bg:#FFFFFF; --gva-surface:#F3F6FC; --gva-fg:#101010; --gva-fg-sub:#505050;
-    --gva-rule:#DADDE3; --gva-rule-strong:#9A9AA0; --gva-track:#E3E9F6;
-    --gva-short-line:#101010; --gva-blue-tint:rgba(36,107,255,.10);
-  }
-}
+
 @media (prefers-reduced-motion: reduce){
   :root{ --gva-dur-count:0ms; --gva-dur-bar:0ms; --gva-dur-fade:0ms; }
 }
